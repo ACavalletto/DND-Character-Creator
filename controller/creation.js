@@ -20,7 +20,7 @@ router.put('/:id/class', (req, res) => {
 })
 router.put('/:id/background', (req, res) => {
     Character.findByIdAndUpdate(req.params.id, req.body, () => {
-        res.redirect(`/creation/:id/equipment`)
+        res.redirect(`/creation/${req.params.id}/equipment`)
     })
 })
 
@@ -31,6 +31,6 @@ router.get('/:id/background', (req, res) => {
     res.render("creation/background.ejs", { id: req.params.id })
 })
 router.get('/:id/equipment', (req, res) => {
-    res.send("equipment page")
+    res.render("creation/equipment.ejs", {id: req.params.id})
 })
 module.exports = router
