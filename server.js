@@ -29,6 +29,9 @@ app.use(methodOverride("_method"))
 app.use(morgan('dev'))
 
 //Routes / Controllers
+const creationController = require('./controller/creation.js')
+app.use('/creation', creationController)
+
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })

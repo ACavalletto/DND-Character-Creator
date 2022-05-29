@@ -1,0 +1,55 @@
+body{
+    background-color: #443277;
+    color: #faddda;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around;
+}
+nav a button{
+    background-color: #c051a7;
+    color: #faddda;
+    border: 2px solid #d770bf;
+    cursor: pointer;
+    transition: background-color .3s, color .3s;
+}
+nav a button:hover{
+    color: #c051a7;
+    background-color: #faddda;
+    border: 2px solid #c051a7;
+}
+main h1{
+    text-align: center;
+    margin: 2em 0;
+}   
+main ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+main ul button{
+        font-size: 16px;
+        color: #faddda;
+        padding: .8em;
+        margin: 3em 0;
+        border: 2px solid #faddda;
+        background-color: #c051a7;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        cursor: pointer;
+        margin-bottom: 0;
+}
+
+.content{
+    display: none;
+    overflow: hidden;
+    background-color: #faddda;
+    color: #443277;
+    padding: 1em;
+}
