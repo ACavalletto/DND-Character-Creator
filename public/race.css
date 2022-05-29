@@ -1,4 +1,5 @@
 body{
+    font-family: 'MedievalSharp', cursive;
     background-color: #443277;
     color: #faddda;
 }
@@ -9,6 +10,7 @@ nav ul{
     justify-content: space-around;
 }
 nav a button{
+    font-family: 'MedievalSharp', cursive;
     background-color: #c051a7;
     color: #faddda;
     border: 2px solid #d770bf;
@@ -33,6 +35,7 @@ main ul{
 }
 
 main ul button{
+    font-family: 'MedievalSharp', cursive;
         font-size: 16px;
         color: #faddda;
         padding: .8em;
@@ -47,6 +50,7 @@ main ul button{
 }
 
 .content{
+    font-family: sans-serif;
     display: none;
     overflow: hidden;
     background-color: #faddda;
