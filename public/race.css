@@ -14,6 +14,7 @@ nav a button{
     background-color: #c051a7;
     color: #faddda;
     border: 2px solid #d770bf;
+    border-radius: 20px;
     cursor: pointer;
     transition: background-color .3s, color .3s;
 }
@@ -23,6 +24,7 @@ nav a button:hover{
     border: 2px solid #c051a7;
 }
 main h1{
+    text-shadow: 2px 3px 2px #c051a7;
     text-align: center;
     margin: 2em 0;
 }   
@@ -41,6 +43,7 @@ main ul button{
         padding: .8em;
         margin: 3em 0;
         border: 2px solid #faddda;
+        border-radius: 20px;
         background-color: #c051a7;
         display: flex;
         flex-direction: row;
@@ -51,8 +54,6 @@ main ul button{
 main ul .active, button:hover{
 background-color: #95307d;
 }
-
-
 .content{
     font-family: sans-serif;
     display: none;
@@ -60,4 +61,18 @@ background-color: #95307d;
     background-color: #faddda;
     color: #443277;
     padding: 1em;
+}
+.content form{
+    text-align: end;
+}
+.content form input{
+    cursor: pointer;
+    background-color: #3d4e7d;
+    color: #faddda;
+    border-radius: 15px;
+    transition: background-color .3s, color .3s ease-in-out;
+}
+.content form input:hover{
+    background-color: #55648d;
+    color:#faafe9;
 }
