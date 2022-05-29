@@ -12,7 +12,8 @@
             <button type="button" class="collapsible">Fighter<i class="fa-solid fa-angle-down"></i></button>
             <div class="content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum.</p>
-                <form action="/creation/:id/class" method="POST">
+                <form action="/creation/<%=id%>/class?_method=PUT" method="POST">
+                    <input type="hidden" name="class" value="Fighter">
                     <input type="submit" value="Choose Class">
                 </form>
             </div>
