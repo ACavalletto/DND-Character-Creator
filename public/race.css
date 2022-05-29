@@ -48,6 +48,10 @@ main ul button{
         cursor: pointer;
         margin-bottom: 0;
 }
+main ul .active, button:hover{
+background-color: #95307d;
+}
+
 
 .content{
     font-family: sans-serif;
