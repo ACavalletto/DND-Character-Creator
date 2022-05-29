@@ -4,6 +4,7 @@ const express = require('express')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
+const Character = require('./models/character.js')
 const app = express()
 const PORT = process.env.PORT
 
@@ -23,6 +24,7 @@ db.on('disconnect', () => console.log('mongo disconnected'))
 
 //Middleware
 app.use(express.urlencoded({ extended: false }))
+app.use("/public", express.static("public"));
 app.use(methodOverride("_method"))
 app.use(morgan('dev'))
 
