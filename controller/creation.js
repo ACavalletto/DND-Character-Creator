@@ -12,9 +12,15 @@ router.post('/race', (req, res) => {
         res.redirect(`/creation/${createdCharacter._id}/class`)
     })
 })
+
 router.put('/:id/class', (req, res) => {
     Character.findByIdAndUpdate(req.params.id, req.body, () => {
-        res.redirect(`/creation/:id/background`)
+        res.redirect(`/creation/${req.params.id}/background`)
+    })
+})
+router.put('/:id/background', (req, res) => {
+    Character.findByIdAndUpdate(req.params.id, req.body, () => {
+        res.redirect(`/creation/:id/equipment`)
     })
 })
 
@@ -22,6 +28,9 @@ router.get('/:id/class', (req, res) => {
     res.render("creation/class.ejs", {id: req.params.id})
 })
 router.get('/:id/background', (req, res) => {
-    res.send("background page")
+    res.render("creation/background.ejs", { id: req.params.id })
+})
+router.get('/:id/equipment', (req, res) => {
+    res.send("equipment page")
 })
 module.exports = router
