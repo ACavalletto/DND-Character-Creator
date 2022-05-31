@@ -10,17 +10,6 @@
     <ul>
             <button type="button" class="collapsible">Human<i class="fa-solid fa-angle-down"></i></button>
             <div class="content">
-                <form action="/creation/race" method="POST">
-                <button type="button" class="collapsible">Age<i class="fa-solid fa-angle-down"></i></button>
-                <div class="content">
-                    <p>Humans reach adulthood in their late teens and live less than a century.</p>
-                    <input type="number" name="age" placeholder="Enter age">
-                </div>
-                <button type="button" class="collapsible">Size<i class="fa-solid fa-angle-down"></i></button>
-                <div class="content">
-                    <p>Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.</p>
-                    <input type="hidden" name="size" value="Medium"/>
-                </div>
                 <button type="button" class="collapsible">Speed<i class="fa-solid fa-angle-down"></i></button>
                 <div class="content">
                     <p>Your base walking speed is 30 feet.</p>
@@ -36,173 +25,86 @@
                 <div class="content">
                     <p>Your ability scores each increase by 1</p>
                 </div>
-                    <input type="hidden" name="race" value="Human">
-                    <input type="submit" value="Choose Race">
-                </form>
+                <a href="/creation/race/human">
+                    <button>For more Information</button>
+                </a>
             </div>
 
             <button type="button" class="collapsible">Dwarf<i class="fa-solid fa-angle-down"></i></button>
             <div class="content">
-                <form action="/creation/race" method="POST">
-                    <button type="button" class="collapsible">Age<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>Dwarves mature at the same rate as humans, but they're considered young until they reach the age of 50. On average, they live about 350 years</p>
-                        <input type="number" name="age" placeholder="Enter age">
-                    </div>
-                    <button type="button" class="collapsible">Size<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium</p>
-                        <input type="hidden" name="size" value="Medium"/>
-                    </div>
                     <button type="button" class="collapsible">Speed<i class="fa-solid fa-angle-down"></i></button>
                     <div class="content">
                         <p>Your base walking speed is 25 feet. Your speed is not reduced by wearing heavy armor</p>
-                        <input type="hidden" name="speed" value="25">
                     </div>
                     <button type="button" class="collapsible">Languages<i class="fa-solid fa-angle-down"></i></button>
                     <div class="content">
                         <p>You speak and write Common and Dwarvish.</p>
-                        <input type="hidden" name="languages" value="Dwarvish">
-                        <input type="hidden" name="languages" value="Common">
-                    </div>
-                    <button type="button" class="collapsible">Darkvision<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of grey</p>
-                        <input type="hidden" name="darkVision" value="60 feet">
                     </div>
                     <button type="button" class="collapsible">Ability Score Increase<i class="fa-solid fa-angle-down"></i></button>
                     <div class="content">
                         <p>Your constituiton score increase by 2 and your Strenght score increases by 2</p>
                     </div>
-                    <input type="hidden" name="race" value="Dwarf">
-                    <input type="submit" value="Choose Race">
-                </form>
+                    <a href="/creation/race/dwarf">
+                        <button>For more Information</button>
+                    </a>
             </div>
 
             <button type="button" class="collapsible">Dragonborn<i class="fa-solid fa-angle-down"></i></button>
             <div class="content">
-                <form action="/creation/race" method="POST">
-                    <button type="button" class="collapsible">Age<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>Young Dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.</p>
-                        <input type="number" name="age" placeholder="Enter age">
-                    </div>
-                    <button type="button" class="collapsible">Size<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.</p>
-                        <input type="hidden" name="size" value="Medium"/>
-                    </div>
-                    <button type="button" class="collapsible">Speed<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
+                 <button type="button" class="collapsible">Speed<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
                         <p>Your base walking speed is 30 feet.</p>
-                        <input type="hidden" name="speed" value="30">
-                    </div>
-                    <button type="button" class="collapsible">Languages<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>You speak and write Common and Draconic.</p>
-                        <input type="hidden" name="languages" value="Draconic">
-                        <input type="hidden" name="languages" value="Common">
+                </div>
+                <button type="button" class="collapsible">Languages<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
+                    <p>You speak and write Common and Draconic.</p>
                     </div>
                     <button type="button" class="collapsible">Ability Score Increase<i class="fa-solid fa-angle-down"></i></button>
                     <div class="content">
                         <p>Your Strength score increase by 2, and your Charisma score increases by 1.</p>
                     </div>
-                    <button type="button" class="collapsible">Draconic Ancestry<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>You are distantly related to a particular kind of dragon. Choose a type of dragon from the chart.</p>
-                        <a href="http://pm1.narvii.com/8157/d0d3534ae307cc74e17cc7b1e7aa462794e4a510r1-891-840v2_uhq.jpg" target="_blank">
-                        <button type="button" class="collapsible">Draconic Ancestry Chart
-                        </a>
-                    </div>
-                    <button type="button" class="collapsible">Damage Resistance<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>You have resistance to damage type associated with your ancestry.</p>
-                        <input type="text" name="resistance" id="resistance">
-                    </div>
-                    <button type="button" class="collapsible">Breath Weapon<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>You can use your action to exhale destructive energy. It deals damage according to your ancestry. When you use your breath weapon, all creatures in the area must make a saving throw, type of which is determined by your ancestry. The DC of the saving throw is 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damgae increases to 3d6 at 6th level, 4d6 at 11th, and 5d6 at 16th level. After using your breath weapon, you cannot use it again until you complete a short or long rest.</p>
-                    </div>
-                <form action="/creation/race" method="POST">
-                    <input type="hidden" name="race" value="Dragonborn">
-                    <input type="submit" value="Choose Race">
-                </form>
+                    <a href="/creation/race/dragonborn">
+                        <button>For more Information</button>
+                    </a>
             </div>
 
             <button type="button" class="collapsible">Elf<i class="fa-solid fa-angle-down"></i></button>
             <div class="content">
-                <form action="/creation/race" method="POST">
-                    <button type="button" class="collapsible">Age<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old</p>
-                        <input type="number" name="age" placeholder="Enter age">
-                    </div>
-                    <button type="button" class="collapsible">Size<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.</p>
-                        <input type="hidden" name="size" value="Medium"/>
-                    </div>
                     <button type="button" class="collapsible">Speed<i class="fa-solid fa-angle-down"></i></button>
                     <div class="content">
                         <p>Your base walking speed is 30 feet.</p>
-                        <input type="hidden" name="speed" value="30">
                     </div>
                     <button type="button" class="collapsible">Languages<i class="fa-solid fa-angle-down"></i></button>
                     <div class="content">
                         <p>You speak and write Common and Elvish.</p>
-                        <input type="hidden" name="languages" value="Elvish">
-                        <input type="hidden" name="languages" value="Common">
-                    </div>
-                    <button type="button" class="collapsible">Darkvision<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as it it were dim light. You can't discenr color in darknes, only shades of gray.</p>
-                        <input type="hidden" name="darkVision" value="60 feet">
                     </div>
                     <button type="button" class="collapsible">Ability Score Increase<i class="fa-solid fa-angle-down"></i></button>
                     <div class="content">
                         <p>Your Dexterity score increase by 2 and your Wisdom score increase by 1.</p>
                     </div>
-                    <input type="hidden" name="race" value="Elf">
-                    <input type="submit" value="Choose Race">
+                    <a href="/creation/race/elf">
+                        <button>For more Information</button>
+                    </a>
                 </form>
             </div>
 
             <button type="button" class="collapsible">Tiefling<i class="fa-solid fa-angle-down"></i></button>
             <div class="content">
-                <form action="/creation/race" method="POST">
-                    <button type="button" class="collapsible">Age<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>Tieflings mature at the same rate as humans but live a few years longer.</p>
-                        <input type="number" name="age" placeholder="Enter age">
-                    </div>
-                    <button type="button" class="collapsible">Size<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>Tieflings are about the same size and build as humans.Your size is Medium</p>
-                        <input type="hidden" name="size" value="Medium"/>
-                    </div>
-                    <button type="button" class="collapsible">Speed<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
+                <button type="button" class="collapsible">Speed<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
                         <p>Your base walking speed is 30 feet.</p>
-                        <input type="hidden" name="speed" value="30">
-                    </div>
-                    <button type="button" class="collapsible">Languages<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>You speak and write Common and Infernal.</p>
-                        <input type="hidden" name="languages" value="Infernal">
-                        <input type="hidden" name="languages" value="Common">
-                    </div>
-                    <button type="button" class="collapsible">Darkvision<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as it it were dim light. You can't discenr color in darknes, only shades of gray.</p>
-                        <input type="hidden" name="darkVision" value="60 feet">
-                    </div>
-                    <button type="button" class="collapsible">Ability Score Increase<i class="fa-solid fa-angle-down"></i></button>
-                    <div class="content">
-                        <p>Your Charisma scores increases by 2 and your intelligence score increases by 1</p>
-                    </div>
-                    <input type="hidden" name="race" value="Tiefling">
-                    <input type="submit" value="Choose Race">
-                </form>
+                </div>
+                <button type="button" class="collapsible">Languages<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
+                    <p>You speak and write Common and Infernal.</p>
+                </div>
+                <button type="button" class="collapsible">Ability Score Increase<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
+                    <p>Your Charisma scores increases by 2 and your intelligence score increases by 1</p>
+                </div>
+                <a href="/creation/race/tiefling">
+                    <button>For more Information</button>
+                </a>
             </div>
     </ul>
     <%- include('../partials/collapsible.ejs') %> 

@@ -7,6 +7,9 @@ router.get('/race', (req, res) => {
 })
 
 //Create Routes
+const raceController = require('./class.js')
+router.use('/race', raceController)
+
 router.post('/race', (req, res) => {
     Character.create(req.body, (err, createdCharacter) => {
         res.redirect(`/creation/${createdCharacter._id}/class`)

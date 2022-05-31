@@ -1,0 +1,60 @@
+<%- include('../partials/header.ejs') %> 
+<link rel="stylesheet" href="../../public/race.css">
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <main>
+        <ul>
+            <button type="button" class="collapsible">Dragonborn<i class="fa-solid fa-angle-down"></i></button>
+            <div class="content">
+                <form action="/creation/race" method="POST">
+                    <button type="button" class="collapsible">Age<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>Young Dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.</p>
+                        <input type="number" name="age" placeholder="Enter age">
+                    </div>
+                    <button type="button" class="collapsible">Size<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.</p>
+                        <input type="hidden" name="size" value="Medium"/>
+                    </div>
+                    <button type="button" class="collapsible">Speed<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>Your base walking speed is 30 feet.</p>
+                        <input type="hidden" name="speed" value="30">
+                    </div>
+                    <button type="button" class="collapsible">Languages<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>You speak and write Common and Draconic.</p>
+                        <input type="hidden" name="languages" value="Draconic">
+                        <input type="hidden" name="languages" value="Common">
+                    </div>
+                    <button type="button" class="collapsible">Ability Score Increase<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>Your Strength score increase by 2, and your Charisma score increases by 1.</p>
+                    </div>
+                    <button type="button" class="collapsible">Draconic Ancestry<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>You are distantly related to a particular kind of dragon. Choose a type of dragon from the chart.</p>
+                        <a href="http://pm1.narvii.com/8157/d0d3534ae307cc74e17cc7b1e7aa462794e4a510r1-891-840v2_uhq.jpg" target="_blank">
+                        <button type="button" class="collapsible">Draconic Ancestry Chart
+                        </a>
+                    </div>
+                    <button type="button" class="collapsible">Damage Resistance<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>You have resistance to damage type associated with your ancestry.</p>
+                        <input type="text" name="resistance" id="resistance">
+                    </div>
+                    <button type="button" class="collapsible">Breath Weapon<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>You can use your action to exhale destructive energy. It deals damage according to your ancestry. When you use your breath weapon, all creatures in the area must make a saving throw, type of which is determined by your ancestry. The DC of the saving throw is 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damgae increases to 3d6 at 6th level, 4d6 at 11th, and 5d6 at 16th level. After using your breath weapon, you cannot use it again until you complete a short or long rest.</p>
+                    </div>
+                <form action="/creation/race" method="POST">
+                    <input type="hidden" name="race" value="Dragonborn">
+                    <input type="submit" value="Choose Dragonborn">
+                </form>
+            </div>
+    <%- include('../partials/collapsible.ejs') %>
+</ul> 
+</main>
+</body>

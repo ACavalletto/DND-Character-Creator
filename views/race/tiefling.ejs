@@ -1,0 +1,47 @@
+<%- include('../partials/header.ejs') %> 
+<link rel="stylesheet" href="../../public/race.css">
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <main>
+        <ul>
+            <button type="button" class="collapsible">Tiefling<i class="fa-solid fa-angle-down"></i></button>
+            <div class="content">
+                <form action="/creation/race" method="POST">
+                    <button type="button" class="collapsible">Age<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>Tieflings mature at the same rate as humans but live a few years longer.</p>
+                        <input type="number" name="age" placeholder="Enter age">
+                    </div>
+                    <button type="button" class="collapsible">Size<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>Tieflings are about the same size and build as humans.Your size is Medium</p>
+                        <input type="hidden" name="size" value="Medium"/>
+                    </div>
+                    <button type="button" class="collapsible">Speed<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>Your base walking speed is 30 feet.</p>
+                        <input type="hidden" name="speed" value="30">
+                    </div>
+                    <button type="button" class="collapsible">Languages<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>You speak and write Common and Infernal.</p>
+                        <input type="hidden" name="languages" value="Infernal">
+                        <input type="hidden" name="languages" value="Common">
+                    </div>
+                    <button type="button" class="collapsible">Darkvision<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as it it were dim light. You can't discenr color in darknes, only shades of gray.</p>
+                        <input type="hidden" name="darkVision" value="60 feet">
+                    </div>
+                    <button type="button" class="collapsible">Ability Score Increase<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>Your Charisma scores increases by 2 and your intelligence score increases by 1</p>
+                    </div>
+                    <input type="hidden" name="race" value="Tiefling">
+                    <input type="submit" value="Choose Tiefling">
+                </form>
+    <%- include('../partials/collapsible.ejs') %>
+</ul> 
+</main>
+</body>

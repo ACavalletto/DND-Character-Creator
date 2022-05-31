@@ -1,0 +1,48 @@
+<%- include('../partials/header.ejs') %> 
+<link rel="stylesheet" href="../../public/race.css">
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <main>
+        <ul>
+            <button type="button" class="collapsible">Dwarf<i class="fa-solid fa-angle-down"></i></button>
+            <div class="content">
+                <form action="/creation/race" method="POST">
+                    <button type="button" class="collapsible">Age<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>Dwarves mature at the same rate as humans, but they're considered young until they reach the age of 50. On average, they live about 350 years</p>
+                        <input type="number" name="age" placeholder="Enter age">
+                    </div>
+                    <button type="button" class="collapsible">Size<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium</p>
+                        <input type="hidden" name="size" value="Medium"/>
+                    </div>
+                    <button type="button" class="collapsible">Speed<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>Your base walking speed is 25 feet. Your speed is not reduced by wearing heavy armor</p>
+                        <input type="hidden" name="speed" value="25">
+                    </div>
+                    <button type="button" class="collapsible">Languages<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>You speak and write Common and Dwarvish.</p>
+                        <input type="hidden" name="languages" value="Dwarvish">
+                        <input type="hidden" name="languages" value="Common">
+                    </div>
+                    <button type="button" class="collapsible">Darkvision<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of grey</p>
+                        <input type="hidden" name="darkVision" value="60 feet">
+                    </div>
+                    <button type="button" class="collapsible">Ability Score Increase<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>Your constituiton score increase by 2 and your Strenght score increases by 2</p>
+                    </div>
+                    <input type="hidden" name="race" value="Dwarf">
+                    <input type="submit" value="Choose Dwarf">
+                </form>
+            </div>
+    <%- include('../partials/collapsible.ejs') %>
+</ul> 
+</main>
+</body>
