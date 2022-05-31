@@ -7,6 +7,10 @@ const characterSchema = new Schema({
     class: String,
     armorClass: Number,
     health: Number,
+    age: Number,
+    speed: Number,
+    size: String,
+    languages: [{ type: String }],
     stats: {
         strength: String,
         dexterity: String,

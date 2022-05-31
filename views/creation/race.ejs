@@ -10,8 +10,32 @@
     <ul>
             <button type="button" class="collapsible">Human<i class="fa-solid fa-angle-down"></i></button>
             <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum.</p>
                 <form action="/creation/race" method="POST">
+                <button type="button" class="collapsible">Age<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
+                    <p>Humans reach adulthood in their late teens and live less than a century.</p>
+                    <input type="number" name="age" placeholder="Enter age">
+                </div>
+                <button type="button" class="collapsible">Size<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
+                    <p>Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.</p>
+                    <input type="hidden" name="size" value="Medium"/>
+                </div>
+                <button type="button" class="collapsible">Speed<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
+                    <p>Your base walking speed is 30 feet.</p>
+                    <input type="hidden" name="speed" value="30">
+                </div>
+                <button type="button" class="collapsible">Languages<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
+                    <p>You speak and write Common and one extra language of your choice.</p>
+                    <input type="text" name="languages">
+                    <input type="hidden" name="languages" value="Common">
+                </div>
+                <button type="button" class="collapsible">Ability Score Increase<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
+                    <p>Your ability scores each increase by 1</p>
+                </div>
                     <input type="hidden" name="race" value="Human">
                     <input type="submit" value="Choose Race">
                 </form>
@@ -20,21 +44,36 @@
             <button type="button" class="collapsible">Dwarf<i class="fa-solid fa-angle-down"></i></button>
             <div class="content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum.</p>
+                <form action="/creation/race" method="POST">
+                    <input type="hidden" name="race" value="Dwarf">
+                    <input type="submit" value="Choose Race">
+                </form>
             </div>
 
             <button type="button" class="collapsible">Dragonborn<i class="fa-solid fa-angle-down"></i></button>
             <div class="content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum.</p>
+                <form action="/creation/race" method="POST">
+                    <input type="hidden" name="race" value="Dragonborn">
+                    <input type="submit" value="Choose Race">
+                </form>
             </div>
 
             <button type="button" class="collapsible">Elf<i class="fa-solid fa-angle-down"></i></button>
             <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum.</p>
+                <form action="/creation/race" method="POST">
+                    <input type="hidden" name="race" value="Elf">
+                    <input type="submit" value="Choose Race">
+                </form>
             </div>
 
             <button type="button" class="collapsible">Tiefling<i class="fa-solid fa-angle-down"></i></button>
             <div class="content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum.</p>
+                <form action="/creation/race" method="POST">
+                    <input type="hidden" name="race" value="Tiefling">
+                    <input type="submit" value="Choose Race">
+                </form>
             </div>
     </ul>
     <%- include('../partials/collapsible.ejs') %> 
