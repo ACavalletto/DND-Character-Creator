@@ -1,11 +1,22 @@
 <%- include('./partials/header.ejs') %>
 <link rel="stylesheet" href="../public/character-sheet.css">
+<script src="../public/javascript/modal.js" defer></script>
 </head>
 <body>
     <header>
         <h1><%= character.name %> </h1>
         <h3><%= character.race %> </h3>
         <h3><%= character.class %> </h3>
+        <button id="deleteBtn"></button>
+        <div id="modal">
+        <div class ="modal-content">
+            <span id="close">&times;</span>
+            <p>Are you sure you want to delete <%= character.name %>?</p>
+            <form action="/<%= character._id%>/delete?_method=DELETE" method="POST">
+            <input type="submit" value="Delete">
+            </form>
+        </div>
+    </div>
     </header>
     <main>
         <div class="abilityScores">
