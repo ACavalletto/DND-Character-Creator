@@ -1,0 +1,57 @@
+<%- include('./partials/header.ejs') %>
+<link rel="stylesheet" href="../public/character-sheet.css">
+</head>
+<body>
+    <header>
+        <h1><%= character.name %> </h1>
+        <h3><%= character.race %> </h3>
+        <h3><%= character.class %> </h3>
+    </header>
+    <main>
+        <div class="abilityScores">
+            <div class="ability">
+                <p>
+                    <%= character.stats.strength %> 
+                </p>
+                <p>Strength</p>
+                <p>+<%-include('./partials/ability-modifiers.ejs', {stat: character.stats.strength})  %></p>
+            </div>
+            <div class="ability">
+                <p>
+                    <%= character.stats.dexterity %> 
+                </p>
+                <p>Dexterity</p>
+                <p>+<%-include('./partials/ability-modifiers.ejs', {stat: character.stats.dexterity})  %></p>
+            </div>
+            <div class="ability">
+                <p>
+                    <%= character.stats.constitution %> 
+                </p>
+                <p>Constitution</p>
+                <p>+<%-include('./partials/ability-modifiers.ejs', {stat: character.stats.constitution})  %></p>
+            </div>
+            <div class="ability">
+                <p>
+                    <%= character.stats.intelligence %> 
+                </p>
+                <p>Intelligence</p>
+                <p>+<%-include('./partials/ability-modifiers.ejs', {stat: character.stats.intelligence})  %></p>
+            </div>
+            <div class="ability">
+                <p>
+                    <%= character.stats.wisdom %> 
+                </p>
+                <p>Wisdom</p>
+                <p>+<%-include('./partials/ability-modifiers.ejs', {stat: character.stats.wisdom})  %></p>
+            </div>
+            <div class="ability">
+                <p>
+                    <%= character.stats.charisma %> 
+                </p>
+                <p>Charisma</p>
+                <p>+<%-include('./partials/ability-modifiers.ejs', {stat: character.stats.charisma})  %></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

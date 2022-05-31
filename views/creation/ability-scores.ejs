@@ -5,6 +5,7 @@
 <%- include('../partials/nav.ejs') %> 
 <main>
 <h1>Ability Scores</h1>
+<form action="/creation/<%=id%>/stats?_method=PUT" method="POST"">
 <div id="scores">
     <div class="score-container">
         <div class="dropdown">
@@ -120,6 +121,10 @@
         </div>
     </div>
 </div>
+<div id="form-submit">
+    <input type="submit" value="Submit">
+</div>
+</form>
 </main>
 </body>
 </html>

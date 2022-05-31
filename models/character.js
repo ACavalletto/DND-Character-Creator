@@ -4,18 +4,17 @@ const Schema = mongoose.Schema
 const characterSchema = new Schema({
     name: String,
     race: String,
-    class: String, 
+    class: String,
     armorClass: Number,
     health: Number,
-    abilityScores: {
-        strength: Number,
-        dexterity: Number,
-        constitution: Number,
-        wisdom: Number,
-        intelligence: Number,
-        charisma: Number,
+    stats: {
+        strength: String,
+        dexterity: String,
+        constitution: String,
+        intelligence: String,
+        wisdom: String,
+        charisma: String,
     },
-    background: String,
     proficiencies: {
         athletics: Boolean,
         acrobatics: Boolean,
@@ -36,9 +35,9 @@ const characterSchema = new Schema({
         performance: Boolean,
         persuasion: Boolean,
     },
-
-
 })
+
+
 
 const Character = mongoose.model("Character", characterSchema)
 

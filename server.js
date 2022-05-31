@@ -35,6 +35,11 @@ app.use('/creation', creationController)
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })
+app.get('/character-sheet/:id', (req, res) => {
+    Character.findById(req.params.id, (err, foundCharacter) => {
+        res.render('characterSheet.ejs', {character: foundCharacter})
+    })
+})
 
 //Listener
 app.listen(PORT, () => {

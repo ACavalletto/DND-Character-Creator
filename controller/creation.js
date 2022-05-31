@@ -14,18 +14,24 @@ router.post('/race', (req, res) => {
 })
 
 router.put('/:id/class', (req, res) => {
-    Character.findByIdAndUpdate(req.params.id, req.body, () => {
+    Character.findByIdAndUpdate(req.params.id, req.body, (err, updatedCharacter) => {
         res.redirect(`/creation/${req.params.id}/background`)
     })
 })
 router.put('/:id/background', (req, res) => {
-    Character.findByIdAndUpdate(req.params.id, req.body, () => {
+    Character.findByIdAndUpdate(req.params.id, req.body, (err, updatedCharacter) => {
         res.redirect(`/creation/${req.params.id}/equipment`)
     })
 })
 router.put('/:id/equipment', (req, res) => {
-    Character.findByIdAndUpdate(req.params.id, req.body, () => {
+    Character.findByIdAndUpdate(req.params.id, req.body, (err, updatedCharacter) => {
         res.redirect(`/creation/${req.params.id}/stats`)
+    })
+})
+router.put('/:id/stats', (req, res) => {
+    let stats = req.body;
+    Character.findByIdAndUpdate(req.params.id, { $set: { stats } }, (err, updatedCharacter) => {
+        res.redirect(`/character-sheet/${req.params.id}`)
     })
 })
 
