@@ -1,5 +1,5 @@
 <%- include('../partials/header.ejs') %> 
-<link rel="stylesheet" href="../../public/race.css">
+<link rel="stylesheet" href="../../public/equipment.css">
 </head>
 <body>
     <%- include('../partials/nav.ejs') %> 
@@ -8,16 +8,14 @@
         <h1>Equipment</h1>
     </div> 
     <ul>
-        <li>
             <button type="button" class="collapsible">Equipment Choices<i class="fa-solid fa-angle-down"></i></button>
             <div class="content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum.</p>
-                <form action="/creation/<%=id%>/background?_method=PUT" method="POST">
+                <form action="/creation/<%=id%>/equipment?_method=PUT" method="POST">
                     <input type="hidden" name="background" value="Acolyte">
                     <input type="submit" value="Choose Equipment">
                 </form>
             </div>
-        </li>
     </ul>
     <%- include('../partials/collapsible.ejs') %> 
 </main>

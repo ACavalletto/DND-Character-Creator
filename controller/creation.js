@@ -23,6 +23,11 @@ router.put('/:id/background', (req, res) => {
         res.redirect(`/creation/${req.params.id}/equipment`)
     })
 })
+router.put('/:id/equipment', (req, res) => {
+    Character.findByIdAndUpdate(req.params.id, req.body, () => {
+        res.redirect(`/creation/${req.params.id}/stats`)
+    })
+})
 
 router.get('/:id/class', (req, res) => {
     res.render("creation/class.ejs", {id: req.params.id})
