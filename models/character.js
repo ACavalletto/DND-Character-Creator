@@ -10,6 +10,9 @@ const characterSchema = new Schema({
     age: Number,
     speed: Number,
     size: String,
+    darkVision: String,
+    resistance: [{ type: String }],
+    savingThrow: String,
     languages: [{ type: String }],
     stats: {
         strength: String,
