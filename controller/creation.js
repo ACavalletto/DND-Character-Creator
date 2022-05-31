@@ -38,4 +38,7 @@ router.get('/:id/background', (req, res) => {
 router.get('/:id/equipment', (req, res) => {
     res.render("creation/equipment.ejs", {id: req.params.id})
 })
+router.get('/:id/stats', (req, res) => {
+    res.render("creation/abilityScores.ejs", {id: req.params.id})
+})
 module.exports = router
