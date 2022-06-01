@@ -8,7 +8,8 @@
         <h1><%= character.name %> </h1>
         <h3><%= character.race %> </h3>
         <h3><%= character.class %> </h3>
-        <button id="deleteBtn"></button>
+        <h3><%= character.background %> </h3>
+        <button id="deleteBtn">Delete</button>
         <div id="modal">
         <div class ="modal-content">
             <span id="close">&times;</span>
@@ -63,6 +64,65 @@
                 <p>Charisma</p>
                 <p>+<%-include('./partials/ability-modifiers.ejs', {stat: character.stats.charisma})  %></p>
             </div>
+        </div>
+        <div class="hp">
+            <p>HP: <%= character.health %> </p>
+        </div>
+        <div class="skills">
+            <% for(let i = 0; i < character.skills.length; i++) {%>
+                <ul>
+                    <li><%= character.skills[i] %> </li>
+                </ul>
+                <% } %>  
+        </div>
+        <div class="proficiencies">
+            <% for(let i = 0; i < character.proficiencies.length; i++) {%>
+                <ul>
+                    <li><%= character.proficiencies[i] %> </li>
+                </ul>
+                <% } %>  
+        </div>
+        <div class="savingThrows">
+            <% for(let i = 0; i < character.savingThrows.length; i++) {%>
+                <ul>
+                    <li><%= character.savingThrows[i] %> </li>
+                </ul>
+                <% } %>  
+        </div>
+        <div class="languages">
+            <% for(let i = 0; i < character.languages.length; i++) {%>
+                <ul>
+                    <li><%= character.languages[i] %> </li>
+                </ul>
+                <% } %>  
+        </div>
+        <div class="resistance">
+            <% for(let i = 0; i < character.resistance.length; i++) {%>
+                <ul>
+                    <li><%= character.resistance[i] %> </li>
+                </ul>
+                <% } %>  
+        </div>
+        <div class="classFeature">
+            <% for(let i = 0; i < character.classFeature.length; i++) {%>
+                <ul>
+                    <li><%= character.classFeature[i] %> </li>
+                </ul>
+                <% } %>  
+        </div>
+        <div class="racialFeature">
+            <% for(let i = 0; i < character.racialFeature.length; i++) {%>
+                <ul>
+                    <li><%= character.racialFeature[i] %> </li>
+                </ul>
+                <% } %>  
+        </div>
+        <div class="equipment">
+            <% for(let i = 0; i < character.equipment.length; i++) {%>
+                <ul>
+                    <li><%= character.equipment[i] %> </li>
+                </ul>
+                <% } %>  
         </div>
     </main>
 </body>

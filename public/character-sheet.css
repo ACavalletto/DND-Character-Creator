@@ -1,3 +1,18 @@
+header{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: left;
+    padding: 0 1em;
+    gap: 0 1em;
+}
+header button{
+    margin-right: 2em;
+    margin-left: auto;
+    width: 50px;
+    height:25px;
+}
+
 #modal{
     display: none;
     position: fixed;

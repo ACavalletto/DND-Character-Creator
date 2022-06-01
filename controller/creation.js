@@ -24,7 +24,7 @@ router.put('/:id/class', (req, res) => {
     })
 })
 router.put('/:id/background', (req, res) => {
-    Character.findByIdAndUpdate(req.params.id, { $push:req.body }, (err, updatedCharacter) => {
+    Character.findByIdAndUpdate(req.params.id, { $push: req.body }, (err, updatedCharacter) => {
         res.redirect(`/creation/${req.params.id}/stats`, )
     })
 })
