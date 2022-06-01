@@ -38,6 +38,23 @@
                     <div class="content">
                         <p>Your Dexterity score increase by 2 and your Wisdom score increase by 1.</p>
                     </div>
+                    <button type="button" class="collapsible">Fey Ancestry<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>You have advantage on saving throws against being charmed, and magic can't put you to sleep.</p>
+                        <input type="hidden" name="racialFeature" value="Fey Ancestry">
+                    </div>
+                    <button type="button" class="collapsible">Trance<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>Elves do not sleep. Instead they meditate deeply, remaining semi-conscious, for 4 hours a day. While meditating, you dream after a fashion; such dreams are actually mental exercises that have become reflexive after years of practice. After resting this way, you gain teh same benefit a human would from 8 hours of sleep.</p>
+                        <input type="hidden" name="racialFeature" value="Trance">
+                    </div>
+                    <button type="button" class="collapsible">Keen Senses<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>You have proficiency in the Perception skill.</p>
+                        <input type="hidden" name="proficiencies" value="Perception">
+                    </div>
+                    <input type="submit" value="Choose Elf">
+                </form>
     <%- include('../partials/collapsible.ejs') %>
 </ul> 
 </main>
