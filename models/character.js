@@ -23,6 +23,7 @@ const characterSchema = new Schema({
     charisma: String,
   },
   proficiencies: [{ type: String }],
+  skills: [{ type: String }],
   cantrips: [{ type: String }],
   racialFeature: [{ type: String }],
   classFeature: [{ type: String }],

@@ -2,8 +2,8 @@ const express = require('express')
 const router = express.Router()
 const Character = require('../models/character.js')
 
-router.get('/:class/:id', (req, res) => {
-    res.render(`class/${req.params.class}.ejs`, {id:req.params.id})
+router.get('/:race', (req, res) => {
+    res.render(`race/${req.params.race}.ejs`)
 })
 
 module.exports = router

@@ -7,7 +7,6 @@ nav ul{
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    justify-content: space-around;
 }
 nav a button{
     font-family: 'MedievalSharp', cursive;

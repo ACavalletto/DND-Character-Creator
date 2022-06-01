@@ -1,0 +1,56 @@
+<%- include('../partials/header.ejs') %> 
+<link rel="stylesheet" href="/public/race.css">
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %> 
+    <main>
+        <ul>
+            
+            <button type="button" class="collapsible">Fighter<i class="fa-solid fa-angle-down"></i></button>
+            <div class="content">
+                <form action="/creation/<%= id%>/class?_method=PUT" method="POST">
+                    <button type="button" class="collapsible">Hit Points<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p><strong>Hit Dice</strong>: 1d10 per fighter level</p>
+                        <p><strong>Hit Points at 1st Level</strong>: 10 + your Constitution modifier.</p>
+                        <p><strong>Hit Points per level</strong>: 1d10 + your Constitution modifier per fighter level after 1st.</p>
+                        <input type="hidden" name="health" value="10">
+                    </div>
+                    <button type="button" class="collapsible">Proficiencies<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p><strong>Armor</strong>: All armor, shields</p>
+                        <p><strong>Weapons</strong>: Simple weapons, martial weapons</p>
+                        <p><strong>Saving Throws</strong>: Strength Constition</p>
+                        <select name="skills">
+                            <option value="Acrobatics">Acrobatics</option>
+                            <option value="Animal Handling">Animal Handling</option>
+                            <option value="Athletics">Athletics</option>
+                            <option value="History">History</option>
+                            <option value="Insight">Insight</option>
+                            <option value="Intimidation">Intimidation</option>
+                            <option value="Perception">Perception</option>
+                            <option value="Survival">Survival</option>
+                        </select>
+                        <select name="skills">
+                            <option value="Acrobatics">Acrobatics</option>
+                            <option value="Animal Handling">Animal Handling</option>
+                            <option value="Athletics">Athletics</option>
+                            <option value="History">History</option>
+                            <option value="Insight">Insight</option>
+                            <option value="Intimidation">Intimidation</option>
+                            <option value="Perception">Perception</option>
+                            <option value="Survival">Survival</option>
+                        </select>
+                        <input type="hidden" name="savingThrows" value="Strength">
+                        <input type="hidden" name="savingThrows" value="Constitution">
+                        <input type="hidden" name="proficiencies" value="All Armor">
+                        <input type="hidden" name="proficiencies" value="Shields">
+                        <input type="hidden" name="proficiencies" value="All Weapons">
+                    </div>
+                    <input type="hidden" name="class" value="Fighter">
+                    <input type="submit" value="Choose Fighter">
+                </form>
+            </div>
+<%- include('../partials/collapsible.ejs') %> 
+</body>
+</html>
