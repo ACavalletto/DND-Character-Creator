@@ -43,13 +43,14 @@
                     <button type="button" class="collapsible">Damage Resistance<i class="fa-solid fa-angle-down"></i></button>
                     <div class="content">
                         <p>You have resistance to damage type associated with your ancestry.</p>
-                        <input type="text" name="resistance" id="resistance">
+                        <input type="text" name="resistance">
                     </div>
                     <button type="button" class="collapsible">Breath Weapon<i class="fa-solid fa-angle-down"></i></button>
                     <div class="content">
                         <p>You can use your action to exhale destructive energy. It deals damage according to your ancestry. When you use your breath weapon, all creatures in the area must make a saving throw, type of which is determined by your ancestry. The DC of the saving throw is 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damgae increases to 3d6 at 6th level, 4d6 at 11th, and 5d6 at 16th level. After using your breath weapon, you cannot use it again until you complete a short or long rest.</p>
+                        <input type="hidden" name="racialFeature" value="Breath Weapon"/>
                     </div>
-                <form action="/creation/race" method="POST">
+                
                     <input type="hidden" name="race" value="Dragonborn">
                     <input type="submit" value="Choose Dragonborn">
                 </form>
