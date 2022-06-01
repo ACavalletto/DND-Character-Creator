@@ -19,18 +19,14 @@ router.post('/race', (req, res) => {
 })
 
 router.put('/:id/class', (req, res) => {
+    console.log(req.params.id)
     Character.findByIdAndUpdate(req.params.id, req.body, (err, updatedCharacter) => {
         res.redirect(`/creation/${req.params.id}/background`)
     })
 })
 router.put('/:id/background', (req, res) => {
-    Character.findByIdAndUpdate(req.params.id, req.body, (err, updatedCharacter) => {
-        res.redirect(`/creation/${req.params.id}/equipment`)
-    })
-})
-router.put('/:id/equipment', (req, res) => {
-    Character.findByIdAndUpdate(req.params.id, req.body, (err, updatedCharacter) => {
-        res.redirect(`/creation/${req.params.id}/stats`)
+    Character.findByIdAndUpdate(req.params.id, { $push:req.body }, (err, updatedCharacter) => {
+        res.redirect(`/creation/${req.params.id}/stats`, )
     })
 })
 router.put('/:id/stats', (req, res) => {
@@ -46,9 +42,7 @@ router.get('/:id/class', (req, res) => {
 router.get('/:id/background', (req, res) => {
     res.render("creation/background.ejs", { id: req.params.id })
 })
-router.get('/:id/equipment', (req, res) => {
-    res.render("creation/equipment.ejs", {id: req.params.id})
-})
+
 router.get('/:id/stats', (req, res) => {
     res.render("creation/ability-scores.ejs", {id: req.params.id})
 })

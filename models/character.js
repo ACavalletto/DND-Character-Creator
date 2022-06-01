@@ -5,6 +5,7 @@ const characterSchema = new Schema({
   name: String,
   race: String,
   class: String,
+  background: String,
   armorClass: Number,
   health: Number,
   age: Number,
@@ -12,7 +13,7 @@ const characterSchema = new Schema({
   size: String,
   darkVision: String,
   resistance: [{ type: String }],
-  savingThrow: String,
+  savingThrows: [{ type: String }],
   languages: [{ type: String }],
   stats: {
     strength: String,
@@ -27,7 +28,9 @@ const characterSchema = new Schema({
   cantrips: [{ type: String }],
   racialFeature: [{ type: String }],
   classFeature: [{ type: String }],
+  equipment: [{ type: String }],
 });
+
 
 const Character = mongoose.model("Character", characterSchema);
 

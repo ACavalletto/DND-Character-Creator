@@ -12,11 +12,16 @@
             <button type="button" class="collapsible">Acolyte<i class="fa-solid fa-angle-down"></i></button>
             <div class="content">
                 <form action="/creation/<%=id%>/background?_method=PUT" method="POST">
-                <button type="button" class="collapsible">Acolyte<i class="fa-solid fa-angle-down"></i></button>
-            <div class="content">
-                
-                    <input type="hidden" name="background" value="Acolyte">
-                    <input type="submit" value="Choose Background">
+                <p><strong>Skill Proficiencies:</strong> Insight, Religion</p>
+                <input type="hidden" name="skills" value="Insight">
+                <input type="hidden" name="skills" value="Religion">
+                <p><strong>Languages:</strong>Two of your choice</p>
+                <input type="text" name="languages">
+                <input type="text" name="languages">
+                <p><strong>Equipment:</strong> A holy symbol, prayer book, 5 sticks of incense, vestments, set of common clothes and a pouch containing 15 gp.</p>
+                <input type="hidden" name="equipment" value="A holy symbol, prayer book, 5 sticks of incense, vestments, set of common clothes and a pouch containing 15 gp.">
+                <input type="hidden" name="background" value="Acolyte">
+                <input type="submit" value="Choose Background">
                 </form>
             </div>
 
