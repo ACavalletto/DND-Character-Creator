@@ -38,6 +38,26 @@
                     <div class="content">
                         <p>Your constituiton score increase by 2 and your Strenght score increases by 2</p>
                     </div>
+                    <button type="button" class="collapsible">Dwarven Resilience<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>You have advantage on saving throws against poison, and you have resistance against poison damage.</p>
+                        <input type="hidden" name="resistance" value="Poison">
+                        <input type="hidden" name="racialFeature" value="Dwarven Resilience">
+                    </div>
+                    <button type="button" class="collapsible">Tool proficiency<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>You gain proficiency with artisan's tools of your choice: </p>
+                        <select name="proficiencies">
+                            <option value="Smith's tools">Smith's Tools</option>
+                            <option value="Brewer's Supplies">Brewer's Supplies</option>
+                            <option value="Mason's Tools">Mason's Tools</option>
+                        </select>
+                    </div>
+                    <button type="button" class="collapsible">Stonecunning<i class="fa-solid fa-angle-down"></i></button>
+                    <div class="content">
+                        <p>Whenever you make an Intelligence(History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.</p>
+                        <input type="hidden" name="racialFeature" value="Stonecunning">
+                    </div>
                     <input type="hidden" name="race" value="Dwarf">
                     <input type="submit" value="Choose Dwarf">
                 </form>
