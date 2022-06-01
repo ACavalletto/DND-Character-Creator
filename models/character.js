@@ -42,6 +42,7 @@ const characterSchema = new Schema({
         performance: Boolean,
         persuasion: Boolean,
     },
+    cantrips: [{ type: String }],
 })
 
 
