@@ -19,7 +19,6 @@ router.post('/race', (req, res) => {
 })
 
 router.put('/:id/class', (req, res) => {
-    console.log(req.params.id)
     Character.findByIdAndUpdate(req.params.id, req.body, (err, updatedCharacter) => {
         res.redirect(`/creation/${req.params.id}/background`)
     })
