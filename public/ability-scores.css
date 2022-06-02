@@ -42,6 +42,7 @@ main h1{
     padding: 10px;
     background-color: #c051a7;
     border: 2px solid #faddda;
+    border-radius: 8px;
     font-size: 1.25em;
 }
 .dropdown-header{

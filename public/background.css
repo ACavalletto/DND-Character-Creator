@@ -1,0 +1,98 @@
+body{
+    font-family: 'MedievalSharp', cursive;
+    background-color: #443277;
+    color: #faddda;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+nav a button{
+    font-family: 'MedievalSharp', cursive;
+    background-color: #c051a7;
+    color: #faddda;
+    border: 2px solid #d770bf;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color .3s, color .3s;
+}
+nav a button:hover{
+    color: #c051a7;
+    background-color: #faddda;
+    border: 2px solid #c051a7;
+}
+main h1{
+    text-shadow: 2px 3px 2px #c051a7;
+    text-align: center;
+    margin: 2em 0;
+}   
+main ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+main ul button{
+    font-family: 'MedievalSharp', cursive;
+        font-size: 16px;
+        color: #faddda;
+        padding: .8em;
+        margin: 3em 0;
+        border: 2px solid #faddda;
+        border-radius: 20px;
+        background-color: #c051a7;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        cursor: pointer;
+        margin-bottom: 0;
+}
+main ul .active, button:hover{
+background-color: #95307d;
+}
+.content{
+    font-family: sans-serif;
+    display: none;
+    overflow: hidden;
+    background-color: #faddda;
+    color: #443277;
+    border: 3px solid #c25eab;
+    border-radius: 10px;
+    padding: 1em 2em;
+    margin: 0 20px;
+    line-height: 1.5em;
+}
+.content form{
+
+}
+.content form input{
+    margin-bottom: 10px;
+    margin-left: 25%;
+    cursor: pointer;
+    text-align:center;
+    background-color: #3d4e7d;
+    color: #faddda;
+    border-radius: 15px;
+    transition: background-color .3s, color .3s ease-in-out;
+}
+.content form input:hover{
+    background-color: #55648d;
+    color:#faafe9;
+}
+.content button{
+    width: 100%;
+    text-align: center;
+}
+.content a{
+    text-decoration: none;
+    text-align: center;
+}
+main a button{
+    background-color: #3d4e7d;
+}
+main a button:hover{
+    background-color: #7b8ab3;
+}
