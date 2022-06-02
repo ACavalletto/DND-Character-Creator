@@ -34,6 +34,16 @@ A web application that allows the user to go through the process of creating a c
 
 ## Getting Started
 
+Deployed Link: https://glacial-lowlands-77176.herokuapp.com/
+
+
 ---
 
 ## Next Steps
+
+- Flesh out more of the content pages and add more options for creation of different classes and backgrounds.
+- Add in logic to hide an already chosen option within dropdowns.
+- Update navigation bar links so that a user can freely move between race, class, background, ability score, and character sheet pages allowing for editing of character.
+- Add page for user to add in backstory information about their character to be displayed within the character sheet page.
+- Fully editable character sheet allowing for updating of info as a user levels up their character.
+- Add in subraces, race, and class options.
