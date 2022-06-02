@@ -10,7 +10,7 @@ A web application that allows the user to go through the process of creating a c
 
 ## Screenshots
 
-<img src="https://imgur.com/a/QQxYnKx.jpg">
+<img src="https://imgur.com/2WkJeeI.jpg">
 
 
 ---
