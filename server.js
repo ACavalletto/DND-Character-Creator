@@ -40,6 +40,18 @@ app.delete('/:id/delete', (req, res) => {
         res.redirect('/');
     })
 })
+app.put('/edit/:id', (req, res) => {
+    let equipment = req.body.equipment.split(', ')
+    console.log('equipment')
+    Character.findByIdAndUpdate(req.params.id, { $set: { equipment } }, (err, updatedCharacter) => {
+        res.redirect(`/character-sheet/${req.params.id}`)
+    })
+})
+app.get('/edit-inventory/:id', (req, res) => {
+    Character.findById(req.params.id, (err, foundCharacter) => {
+        res.render('edit.ejs', {character: foundCharacter})
+    })
+})
 app.get('/character-sheet/:id', (req, res) => {
     Character.findById(req.params.id, (err, foundCharacter) => {
         res.render('characterSheet.ejs', {character: foundCharacter})

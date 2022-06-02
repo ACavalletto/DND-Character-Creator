@@ -68,6 +68,7 @@
             <p>HP: <%= character.health+ parseInt(include('./partials/ability-modifiers.ejs', {stat: character.stats.constitution}))  %> </p>
         </div>
         <div class ="features">
+            <div class="features-inner">
             <button type="button" class="collapsible">Skills<i class="fa-solid fa-angle-down"></i></button>
                 <div class="content">
                     <div class="skills">
@@ -77,8 +78,9 @@
                         </ul>
                         <% } %>  
                     </div>
-                
                 </div>
+            </div>
+            <div class="features-inner">
             <button type="button" class="collapsible">Proficiencies<i class="fa-solid fa-angle-down"></i></button>
                 <div class="content">
                     <div class="proficiencies">
@@ -89,6 +91,8 @@
                         <% } %>  
                         </div>
                 </div>
+            </div>
+            <div class="features-inner">
             <button type="button" class="collapsible">Saving Throws<i class="fa-solid fa-angle-down"></i></button>
                 <div class="content">
                      <div class="savingThrows">
@@ -99,6 +103,8 @@
                         <% } %>  
                     </div>
                 </div>
+                </div>
+                <div class="features-inner">
             <button type="button" class="collapsible">Languages<i class="fa-solid fa-angle-down"></i></button>
                 <div class="content">
                     <div class="languages">
@@ -109,6 +115,8 @@
                         <% } %>  
                     </div>
                 </div>
+                </div>
+                <div class="features-inner">
             <button type="button" class="collapsible">Resistances<i class="fa-solid fa-angle-down"></i></button>
                 <div class="content">
                     <div class="resistance">
@@ -119,6 +127,8 @@
                         <% } %>  
                     </div>
                 </div>
+                </div>
+                <div class="features-inner">
             <button type="button" class="collapsible">Class Features<i class="fa-solid fa-angle-down"></i></button>
                 <div class="content">
                     <div class="classFeature">
@@ -129,6 +139,8 @@
                         <% } %>  
                     </div>
                 </div>
+                </div>
+                <div class="features-inner">
             <button type="button" class="collapsible">Racial Features<i class="fa-solid fa-angle-down"></i></button>
                 <div class="content">
                     <div class="racialFeature">
@@ -139,6 +151,8 @@
                         <% } %>  
                     </div>
                 </div>
+                </div>
+                <div class="features-inner">
             <button type="button" class="collapsible">Class Features<i class="fa-solid fa-angle-down"></i></button>
                 <div class="content">
                     <div class="classFeature">
@@ -149,24 +163,20 @@
                         <% } %>  
                 </div>
             </div>
-            <button type="button" class="collapsible">Equipment<i class="fa-solid fa-angle-down"></i></button>
-            <div class="content">
-                <div class="equipment">
-                    <% for(let i = 0; i < character.equipment.length; i++) {%>
-                        <ul>
-                            <li><%= character.equipment[i] %> </li>
-                        </ul>
-                        <% } %>  
-                </div>
             </div>
         </div>
-
-
-
-
-
-
-
+            <div class="equipment">
+                <a href="/edit-inventory/<%=character._id%> ">
+                    <button type="button">Edit Inventory</button>
+                </a>
+                <% for(let i = 0; i < character.equipment.length; i++) {%>
+                <ul>
+                    <li><%= character.equipment[i] %> </li>
+                </ul>
+                <% } %>  
+            </div>
+            </div>
+        </div>
     </main>
     <%- include('./partials/character-sheet-collapsible.ejs') %> 
 </body>

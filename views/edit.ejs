@@ -1,0 +1,15 @@
+<%- include('./partials/header.ejs') %> 
+<link rel="stylesheet" href="../public/edit.css">
+</head>
+<body>
+    <nav>
+        <a href="/character-sheet/<%= character._id%>">
+            <button>Back to <%= character.name%>'s  Sheet</button>
+        </a>
+    </nav>
+    <form action="/edit/<%= character._id%>?_method=PUT" method="POST">
+    <textarea name="equipment"cols="60" rows="10"><%= character.equipment.join(', ')%></textarea>
+    <input type="submit" value="Edit Inventory">
+    </form>
+</body>
+</html>

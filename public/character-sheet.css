@@ -86,6 +86,8 @@ ul{
     text-shadow: 0 1px 1px #faddda;
 }
 #modal span{
+    float: right;
+    margin-right: 40px;
     font-size: 40px;
     cursor: pointer;
 }
@@ -147,10 +149,11 @@ ul{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content:space-around;
+    align-content: center;
     list-style-type: none;
-    height: 500px;
+    gap: 5em;
 }
+
 .collapsible{
     font-family: 'MedievalSharp', cursive;
     width: 20em;
@@ -177,7 +180,24 @@ ul{
     color: #443277;
     border: 3px solid #c25eab;
     border-radius: 10px;
-    padding: 1em 2em;
-    width: 13em;
-
+    width: 75%;
+    margin: 0 auto;
+}
+.content li{
+    list-style-type:initial;
+}
+.equipment{
+    background-color: #faddda;
+    color:#443277;
+    margin: 2em auto;
+    width: 50%;
+    padding: 1em;
+}
+.equipment button{
+    float: right;
+    margin-bottom: 1em;
+}
+.equipment li{
+    margin: .5em 1em;
+    list-style-type:initial;
 }
