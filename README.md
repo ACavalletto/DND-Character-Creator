@@ -13,8 +13,8 @@ A web application that allows the user to go through the process of creating a c
 <img src="https://imgur.com/2WkJeeI.jpg" width="200" height="200">
 <img src="https://imgur.com/uYEYPcP.jpg" width="200" height="200">
 <img src="https://imgur.com/D0R6JAw.jpg" width="200" height="200">
-<img src="https://imgur.com/v0wOa1E" width="200" height="200">
-<img src="https://imgur.com/rjMzqMz" width="200" height="200">
+<img src="https://imgur.com/v0wOa1E.jpg" width="200" height="200">
+<img src="https://imgur.com/rjMzqMz.jpg" width="200" height="200">
 
 
 ---
