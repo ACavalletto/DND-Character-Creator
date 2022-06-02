@@ -6,9 +6,8 @@
     <%- include('./partials/nav.ejs') %> 
     <header>
         <h1><%= character.name %> </h1>
-        <h3><%= character.race %> </h3>
-        <h3><%= character.class %> </h3>
-        <h3><%= character.background %> </h3>
+        <h3 id="race"><%= character.race %> </h3>
+        <h3 id="class"><%= character.class %> </h3>
         <button id="deleteBtn">Delete</button>
         <div id="modal">
         <div class ="modal-content">
@@ -23,107 +22,152 @@
     <main>
         <div class="abilityScores">
             <div class="ability">
-                <p>
+                <p class="scoretotal">
                     <%= character.stats.strength %> 
                 </p>
-                <p>Strength</p>
-                <p>+<%-include('./partials/ability-modifiers.ejs', {stat: character.stats.strength})  %></p>
+                <p class="score">Strength</p>
+                <p class="modifier"><%-include('./partials/ability-modifiers.ejs', {stat: character.stats.strength})  %></p>
             </div>
             <div class="ability">
-                <p>
+                <p class="scoretotal">
                     <%= character.stats.dexterity %> 
                 </p>
-                <p>Dexterity</p>
-                <p>+<%-include('./partials/ability-modifiers.ejs', {stat: character.stats.dexterity})  %></p>
+                <p class="score">Dexterity</p>
+                <p class="modifier"><%-include('./partials/ability-modifiers.ejs', {stat: character.stats.dexterity})  %></p>
             </div>
             <div class="ability">
-                <p>
+                <p class="scoretotal">
                     <%= character.stats.constitution %> 
                 </p>
-                <p>Constitution</p>
-                <p>+<%-include('./partials/ability-modifiers.ejs', {stat: character.stats.constitution})  %></p>
+                <p class="score">Constitution</p>
+                <p class="modifier"><%-include('./partials/ability-modifiers.ejs', {stat: character.stats.constitution})  %></p>
             </div>
             <div class="ability">
-                <p>
+                <p class="scoretotal">
                     <%= character.stats.intelligence %> 
                 </p>
-                <p>Intelligence</p>
-                <p>+<%-include('./partials/ability-modifiers.ejs', {stat: character.stats.intelligence})  %></p>
+                <p class="score">Intelligence</p>
+                <p class="modifier"><%-include('./partials/ability-modifiers.ejs', {stat: character.stats.intelligence})  %></p>
             </div>
             <div class="ability">
-                <p>
+                <p class="scoretotal">
                     <%= character.stats.wisdom %> 
                 </p>
-                <p>Wisdom</p>
-                <p>+<%-include('./partials/ability-modifiers.ejs', {stat: character.stats.wisdom})  %></p>
+                <p class="score">Wisdom</p>
+                <p class="modifier"><%-include('./partials/ability-modifiers.ejs', {stat: character.stats.wisdom})  %></p>
             </div>
             <div class="ability">
-                <p>
+                <p class="scoretotal">
                     <%= character.stats.charisma %> 
                 </p>
-                <p>Charisma</p>
-                <p>+<%-include('./partials/ability-modifiers.ejs', {stat: character.stats.charisma})  %></p>
+                <p class="score">Charisma</p>
+                <p class="modifier"><%-include('./partials/ability-modifiers.ejs', {stat: character.stats.charisma})  %></p>
             </div>
         </div>
         <div class="hp">
-            <p>HP: <%= character.health %> </p>
+            <p>HP: <%= character.health+ parseInt(include('./partials/ability-modifiers.ejs', {stat: character.stats.constitution}))  %> </p>
         </div>
-        <div class="skills">
-            <% for(let i = 0; i < character.skills.length; i++) {%>
-                <ul>
-                    <li><%= character.skills[i] %> </li>
-                </ul>
-                <% } %>  
+        <div class ="features">
+            <button type="button" class="collapsible">Skills<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
+                    <div class="skills">
+                    <% for(let i = 0; i < character.skills.length; i++) {%>
+                        <ul>
+                            <li><%= character.skills[i] %> </li>
+                        </ul>
+                        <% } %>  
+                    </div>
+                
+                </div>
+            <button type="button" class="collapsible">Proficiencies<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
+                    <div class="proficiencies">
+                        <% for(let i = 0; i < character.proficiencies.length; i++) {%>
+                        <ul>
+                            <li><%= character.proficiencies[i] %> </li>
+                        </ul>
+                        <% } %>  
+                        </div>
+                </div>
+            <button type="button" class="collapsible">Saving Throws<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
+                     <div class="savingThrows">
+                        <% for(let i = 0; i < character.savingThrows.length; i++) {%>
+                        <ul>
+                            <li><%= character.savingThrows[i] %> </li>
+                        </ul>
+                        <% } %>  
+                    </div>
+                </div>
+            <button type="button" class="collapsible">Languages<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
+                    <div class="languages">
+                        <% for(let i = 0; i < character.languages.length; i++) {%>
+                        <ul>
+                            <li><%= character.languages[i] %> </li>
+                        </ul>
+                        <% } %>  
+                    </div>
+                </div>
+            <button type="button" class="collapsible">Resistances<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
+                    <div class="resistance">
+                        <% for(let i = 0; i < character.resistance.length; i++) {%>
+                        <ul>
+                            <li><%= character.resistance[i] %> </li>
+                        </ul>
+                        <% } %>  
+                    </div>
+                </div>
+            <button type="button" class="collapsible">Class Features<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
+                    <div class="classFeature">
+                        <% for(let i = 0; i < character.classFeature.length; i++) {%>
+                        <ul>
+                            <li><%= character.classFeature[i] %> </li>
+                        </ul>
+                        <% } %>  
+                    </div>
+                </div>
+            <button type="button" class="collapsible">Racial Features<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
+                    <div class="racialFeature">
+                        <% for(let i = 0; i < character.racialFeature.length; i++) {%>
+                        <ul>
+                            <li><%= character.racialFeature[i] %> </li>
+                        </ul>
+                        <% } %>  
+                    </div>
+                </div>
+            <button type="button" class="collapsible">Class Features<i class="fa-solid fa-angle-down"></i></button>
+                <div class="content">
+                    <div class="classFeature">
+                    <% for(let i = 0; i < character.classFeature.length; i++) {%>
+                        <ul>
+                            <li><%= character.classFeature[i] %> </li>
+                        </ul>
+                        <% } %>  
+                </div>
+            </div>
+            <button type="button" class="collapsible">Equipment<i class="fa-solid fa-angle-down"></i></button>
+            <div class="content">
+                <div class="equipment">
+                    <% for(let i = 0; i < character.equipment.length; i++) {%>
+                        <ul>
+                            <li><%= character.equipment[i] %> </li>
+                        </ul>
+                        <% } %>  
+                </div>
+            </div>
         </div>
-        <div class="proficiencies">
-            <% for(let i = 0; i < character.proficiencies.length; i++) {%>
-                <ul>
-                    <li><%= character.proficiencies[i] %> </li>
-                </ul>
-                <% } %>  
-        </div>
-        <div class="savingThrows">
-            <% for(let i = 0; i < character.savingThrows.length; i++) {%>
-                <ul>
-                    <li><%= character.savingThrows[i] %> </li>
-                </ul>
-                <% } %>  
-        </div>
-        <div class="languages">
-            <% for(let i = 0; i < character.languages.length; i++) {%>
-                <ul>
-                    <li><%= character.languages[i] %> </li>
-                </ul>
-                <% } %>  
-        </div>
-        <div class="resistance">
-            <% for(let i = 0; i < character.resistance.length; i++) {%>
-                <ul>
-                    <li><%= character.resistance[i] %> </li>
-                </ul>
-                <% } %>  
-        </div>
-        <div class="classFeature">
-            <% for(let i = 0; i < character.classFeature.length; i++) {%>
-                <ul>
-                    <li><%= character.classFeature[i] %> </li>
-                </ul>
-                <% } %>  
-        </div>
-        <div class="racialFeature">
-            <% for(let i = 0; i < character.racialFeature.length; i++) {%>
-                <ul>
-                    <li><%= character.racialFeature[i] %> </li>
-                </ul>
-                <% } %>  
-        </div>
-        <div class="equipment">
-            <% for(let i = 0; i < character.equipment.length; i++) {%>
-                <ul>
-                    <li><%= character.equipment[i] %> </li>
-                </ul>
-                <% } %>  
-        </div>
+
+
+
+
+
+
+
     </main>
+    <%- include('./partials/character-sheet-collapsible.ejs') %> 
 </body>
 </html>
