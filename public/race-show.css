@@ -50,6 +50,13 @@ main ul button{
         cursor: pointer;
         margin-bottom: 0;
 }
+.container{
+    background-color: #faddda;
+    color:#443277;
+    margin: 0 25%;
+    padding: 2.5em;
+
+}
 main ul .active, button:hover{
 background-color: #95307d;
 }
@@ -57,39 +64,34 @@ background-color: #95307d;
     font-family: sans-serif;
     display: none;
     overflow: hidden;
-    background-color: #faddda;
-    color: #443277;
-    border: 3px solid #c25eab;
+    background-color: #c051a7;
+    color:#faddda;
+    border: 3px groove #443277;
     border-radius: 10px;
     padding: 1em 2em;
     margin: 0 20px;
     line-height: 1.5em;
 }
-.content form{
+.container form{
     text-align: end;
 }
-.content form input{
+.container form input{
+    text-align: center;
     cursor: pointer;
     background-color: #3d4e7d;
     color: #faddda;
     border-radius: 15px;
     transition: background-color .3s, color .3s ease-in-out;
 }
-.content form input:hover{
-    background-color: #55648d;
+.container form input:hover{
+    background-color: #6d7ba1;
     color:#faafe9;
 }
-.content button{
+.container button{
     width: 100%;
     text-align: center;
 }
-.content a{
+.container a{
     text-decoration: none;
     text-align: center;
-}
-main a button{
-    background-color: #3d4e7d;
-}
-main a button:hover{
-    background-color: #7b8ab3;
 }

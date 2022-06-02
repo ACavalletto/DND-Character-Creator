@@ -65,7 +65,20 @@
             </div>
         </div>
         <div class="hp">
+            <form id="health-up" action="/health/<%= character._id%>?_method=PUT" method="POST">
+                <input type="hidden" name="health" value="<%=character.health +1%>">
+                <button type="submit" name="health">
+                    <i class="fa-solid fa-angle-up fa-xl"></i>
+                </button>
+            </form>
             <p>HP: <%= character.health+ parseInt(include('./partials/ability-modifiers.ejs', {stat: character.stats.constitution}))  %> </p>
+            <form id="health-down" action="/health/<%= character._id%>?_method=PUT" method="POST">
+                <input type="hidden" name="health" value="<%=character.health -1%>">
+                <button type="submit" name="health">
+                    <i class="fa-solid fa-angle-down fa-xl"></i>
+                </button>
+            </form>
+
         </div>
         <div class ="features">
             <div class="features-inner">

@@ -47,6 +47,12 @@ app.put('/edit/:id', (req, res) => {
         res.redirect(`/character-sheet/${req.params.id}`)
     })
 })
+app.put('/health/:id', (req, res) => {
+    let health = req.body.health[0]
+    Character.findByIdAndUpdate(req.params.id, {$set: { health } }, (err, updatedCharacter) => {
+        res.redirect(`/character-sheet/${req.params.id}`)
+    })
+})
 app.get('/edit-inventory/:id', (req, res) => {
     Character.findById(req.params.id, (err, foundCharacter) => {
         res.render('edit.ejs', {character: foundCharacter})

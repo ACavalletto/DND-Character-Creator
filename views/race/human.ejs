@@ -1,13 +1,12 @@
 <%- include('../partials/header.ejs') %> 
-<link rel="stylesheet" href="../../public/race.css">
+<link rel="stylesheet" href="../../public/race-show.css">
 </head>
 <body>
     <%- include('../partials/nav.ejs') %> 
     <main>
+        <div class="container">
         <ul>
-    <button type="button" class="collapsible">Human<i class="fa-solid fa-angle-down"></i></button>
-    <div class="content">
-        <form action="/creation/race" method="POST">
+        <form id= "name" action="/creation/race" method="POST">
             <p><strong>Name:</strong><input type="text" name="name"></p>
         <button type="button" class="collapsible">Age<i class="fa-solid fa-angle-down"></i></button>
         <div class="content">
@@ -40,5 +39,6 @@
     </div> 
     <%- include('../partials/collapsible.ejs') %>
 </ul> 
+</div>
 </main>
 </body>
