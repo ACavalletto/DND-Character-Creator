@@ -1,0 +1,121 @@
+body{
+    font-family: 'MedievalSharp', cursive;
+    background-color: #443277;
+    color: #faddda;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+nav a button{
+    font-family: 'MedievalSharp', cursive;
+    background-color: #c051a7;
+    color: #faddda;
+    border: 2px solid #d770bf;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color .3s, color .3s;
+}
+nav a button:hover{
+    color: #c051a7;
+    background-color: #faddda;
+    border: 2px solid #c051a7;
+}
+main h1{
+    text-shadow: 2px 3px 2px #c051a7;
+    text-align: center;
+    margin: 2em 0;
+}   
+main ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+main ul button{
+    font-family: 'MedievalSharp', cursive;
+        font-size: 16px;
+        color: #faddda;
+        padding: .8em;
+        margin: 3em 0;
+        border: 2px solid #faddda;
+        border-radius: 20px;
+        background-color: #c051a7;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        cursor: pointer;
+        margin-bottom: 0;
+}
+.container{
+    background-color: #faddda;
+    color:#443277;
+    margin: 0 25%;
+    padding: 2.5em;
+
+}
+main ul .active, button:hover{
+background-color: #95307d;
+}
+.content{
+    text-align: left;
+    font-family: sans-serif;
+    display: none;
+    overflow: hidden;
+    background-color: #c051a7;
+    color:#faddda;
+    border: 3px groove #443277;
+    border-radius: 10px;
+    padding: 1em 2em;
+    margin: 0 20px;
+    line-height: 1.5em;
+}
+.container form{
+    text-align: end;
+}
+.container form input{
+    text-align: center;
+    cursor: pointer;
+    background-color: #3d4e7d;
+    color: #faddda;
+    border-radius: 15px;
+    transition: background-color .3s, color .3s ease-in-out;
+}
+.container form input:hover{
+    background-color: #6d7ba1;
+    color:#faafe9;
+}
+.container button{
+    width: 100%;
+    text-align: center;
+}
+.content a{
+    text-align: center;
+    margin-right: 25%;
+    color:#5e7fda;
+    text-shadow: 1px 1px #212f58;
+    text-decoration:solid;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+.content select{
+    width: 100%;
+    margin-right: 15%;
+    margin-top: 1.5em;
+    background:#443277;
+    color: #faddda;
+    text-align: center;
+    border: 2px inset #d770bf;
+    border-radius: 10px;
+}
+.container input[type="submit"]{
+    width: 50%;
+    margin-right: 30%;
+    margin-top: 1.5em;
+}
+.container h1{
+    margin: 1em 0 .5em 0;
+}

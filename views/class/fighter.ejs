@@ -1,13 +1,13 @@
 <%- include('../partials/header.ejs') %> 
-<link rel="stylesheet" href="/public/race.css">
+<link rel="stylesheet" href="/public/class-show.css">
 </head>
 <body>
     <%- include('../partials/nav.ejs') %> 
     <main>
+        <div class="container">
+           
         <ul>
-            
-            <button type="button" class="collapsible">Fighter<i class="fa-solid fa-angle-down"></i></button>
-            <div class="content">
+            <h1>Fighter</h1>
                 <form action="/creation/<%= id%>/class?_method=PUT" method="POST">
                     <button type="button" class="collapsible">Hit Points<i class="fa-solid fa-angle-down"></i></button>
                     <div class="content">
@@ -93,6 +93,7 @@
                     <input type="submit" value="Choose Fighter">
                 </form>
             </div>
+        </div>
 <%- include('../partials/collapsible.ejs') %> 
 </body>
 </html>
