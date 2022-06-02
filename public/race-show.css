@@ -51,6 +51,7 @@ main ul button{
         margin-bottom: 0;
 }
 .container{
+    border: 4px inset #d770bf;
     background-color: #faddda;
     color:#443277;
     margin: 0 25%;
@@ -82,6 +83,9 @@ background-color: #95307d;
     color: #faddda;
     border-radius: 15px;
     transition: background-color .3s, color .3s ease-in-out;
+}
+.container form input[type="submit"] {
+    margin-top: 1em;
 }
 .container form input:hover{
     background-color: #6d7ba1;
